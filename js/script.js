@@ -387,14 +387,9 @@ window.addEventListener('DOMContentLoaded', () => {
             slideIndex++;
         }
 
-        if (slides.length < 10) {
-            current.textContent = `0${slideIndex}`;
-        } else {
-            current.textContent = slideIndex;
-        }
+        checkSlidesLength();
 
-        dots.forEach(dot => dot.style.opacity = '.5');
-        dots[slideIndex - 1].style.opacity = 1;
+        changeDotsOpacity();
     });
 
     prev.addEventListener('click', () => {
@@ -412,14 +407,10 @@ window.addEventListener('DOMContentLoaded', () => {
             slideIndex--;
         }
 
-        if (slides.length < 10) {
-            current.textContent = `0${slideIndex}`;
-        } else {
-            current.textContent = slideIndex;
-        }
+        checkSlidesLength();
 
-        dots.forEach(dot => dot.style.opacity = '.5');
-        dots[slideIndex - 1].style.opacity = 1;
+        changeDotsOpacity();
+
     });
 
     dots.forEach(dot => {
@@ -431,15 +422,23 @@ window.addEventListener('DOMContentLoaded', () => {
 
             slidesField.style.transform = `translateX(-${offset}px)`;
 
-            if (slides.length < 10) {
-                current.textContent = `0${slideIndex}`;
-            } else {
-                current.textContent = slideIndex;
-            }
+            checkSlidesLength();
 
-            dots.forEach(dot => dot.style.opacity = '.5');
-            dots[slideIndex - 1].style.opacity = 1;
+            changeDotsOpacity();
         });
     });
+
+    function changeDotsOpacity() {
+        dots.forEach(dot => dot.style.opacity = '.5');
+        dots[slideIndex - 1].style.opacity = 1;
+    }
+
+    function checkSlidesLength() {
+        if (slides.length < 10) {
+            current.textContent = `0${slideIndex}`;
+        } else {
+            current.textContent = slideIndex;
+        }
+    }
 
 });

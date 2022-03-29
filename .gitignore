@@ -24,3 +24,4 @@ yarn-error.log*
 /lesson.html
 js/current.json
 js/lesson.js
+css/lesson.css
