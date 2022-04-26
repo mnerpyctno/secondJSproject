@@ -1,6 +1,6 @@
 # My second JavaScript Project
 
-This site is a landing page that offers meal plan services. The page contains tabs with information, sliders, a discount action timer and a calorie calculator. A potential user will be able to fill out an order in a form in a modal window. For convenience, it appears independently after a certain time has passed, but if he has already opened it before that moment, the timer will not work. This takes care of the user, freeing him from intrusive windows.
+This site is a landing page that offers meal plan services. The page contains tabs with information, sliders, a discount action timer and a calorie calculator. A potential user will be able to fill out an order in a form in a modal window. For convenience, it appears independently after a certain time has passed, but if he has already opened it before that moment, the timer will not work. This takes care of the user, freeing him from intrusive windows. [DEMO](https://mnerpyctno.github.io/secondJSproject/)
 
 ## What I've learned
 
